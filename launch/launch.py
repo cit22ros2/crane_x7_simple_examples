@@ -70,6 +70,7 @@ def generate_launch_description():
 
     example_node = Node(name=[LaunchConfiguration('example'), '_node'],
                         package='cit_cranex7_ros2',
+                        executable=LaunchConfiguration('execuse'),
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},
                                     robot_description_semantic,
