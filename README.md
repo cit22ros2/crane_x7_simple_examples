@@ -12,6 +12,7 @@ colcon build
 source ~/cit_cranex7_ros2/install/setup.bash
 ```
 # execute
+## for GAZEBO
 ```
-ros2 launch cit_cranex7_ros2 launch.py execute:='exec_dir'
+ros2 launch cit_cranex7_ros2 launch.py execute:='exec_dir' use_sim_time:='true'
 ```
