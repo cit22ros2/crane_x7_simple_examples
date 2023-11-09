@@ -57,10 +57,8 @@ def generate_launch_description():
     kinematics_yaml = load_yaml('crane_x7_moveit_config', 'config/kinematics.yaml')
 
     declare_example_name = DeclareLaunchArgument(
-        'example', default_value='pose_groupstate',
-        description=('Set an example executable name: '
-                     '[gripper_control, pose_groupstate, joint_values,'
-                     'pick_and_place, cartesian_path]')
+        'execution', default_value='exec_dir',
+        description=('Set an example executable name:[pick_and_place]')
     )
 
     declare_use_sim_time = DeclareLaunchArgument(
@@ -68,7 +66,7 @@ def generate_launch_description():
         description=('Set true when using the gazebo simulator.')
     )
 
-    example_node = Node(name=[LaunchConfiguration('example'), '_node'],
+    example_node = Node(name=[LaunchConfiguration('execution'), '_node'],
                         package='cit_cranex7_ros2',
                         executable=LaunchConfiguration('execute'),
                         output='screen',

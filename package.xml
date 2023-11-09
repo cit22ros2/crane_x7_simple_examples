@@ -4,7 +4,7 @@
   <name>cit_cranex7_ros2</name>
   <version>0.0.1</version>
   <description>programs to control CRANE-X7 package</description>
-  <maintainer email="keitaro@hoge.com">Keitaro Nakamura</maintainer>
+  <maintainer email="keitaro.nkmr0823@gmail.com">Keitaro Nakamura</maintainer>
   <license>Apache License 2.0</license>
 
   <author email="s.aoki@rt-net.jp">Shota Aoki</author>

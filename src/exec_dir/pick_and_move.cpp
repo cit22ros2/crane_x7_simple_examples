@@ -55,6 +55,7 @@ int main(int argc, char ** argv)
   move_group_arm.setNamedTarget("home");
   move_group_arm.move();
 
+  //グリッパーを開く
   gripper_joint_values[0] = angles::from_degrees(60);
   move_group_gripper.setJointValueTarget(gripper_joint_values);
   move_group_gripper.move();
@@ -113,25 +114,8 @@ int main(int argc, char ** argv)
   target_pose.orientation = tf2::toMsg(q);
   move_group_arm.setPoseTarget(target_pose);
   move_group_arm.move();
-/*
-  // 移動する
-  target_pose.position.x = 0.2;
-  target_pose.position.y = 0.2;
-  target_pose.position.z = 0.1;
-  q.setRPY(angles::from_degrees(-90), angles::from_degrees(0), angles::from_degrees(-90));
-  target_pose.orientation = tf2::toMsg(q);
-  move_group_arm.setPoseTarget(target_pose);
-  move_group_arm.move();
-
-  // 下ろす
-  target_pose.position.x = 0.0;
-  target_pose.position.y = 0.2;
-  target_pose.position.z = 0.1;
-  q.setRPY(angles::from_degrees(-90), angles::from_degrees(0), angles::from_degrees(-90));
-  target_pose.orientation = tf2::toMsg(q);
-  move_group_arm.setPoseTarget(target_pose);
-  move_group_arm.move();
-*/
+ 
+  //物体を離す 
   gripper_joint_values[0] = angles::from_degrees(60);
   move_group_gripper.setJointValueTarget(gripper_joint_values);
   move_group_gripper.move();
@@ -139,6 +123,7 @@ int main(int argc, char ** argv)
   // 可動範囲の制限を解除
   move_group_arm.clearPathConstraints();
 
+  //homeの姿勢に戻る
   move_group_arm.setNamedTarget("home");
   move_group_arm.move();
 
