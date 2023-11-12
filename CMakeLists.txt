@@ -19,6 +19,7 @@ find_package(angles REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 
+# 分割コンパイルを行う際には以下に追加
 # Build and install node executables
 add_executable(exec_dir
   src/exec_dir/pick_and_move.cpp
@@ -33,6 +34,7 @@ ament_target_dependencies(exec_dir
   moveit_ros_planning_interface
 )
 
+#コードを増やす際は別途installを記述してください
 install(TARGETS
   exec_dir
   DESTINATION lib/${PROJECT_NAME}/
