@@ -56,6 +56,7 @@ def generate_launch_description():
 
     kinematics_yaml = load_yaml('crane_x7_moveit_config', 'config/kinematics.yaml')
 
+    # 複数のコードを用いる時は以下を編集してください
     declare_example_name = DeclareLaunchArgument(
         'execution', default_value='exec_dir',
         description=('Set an example executable name:[pick_and_place]')
@@ -65,7 +66,7 @@ def generate_launch_description():
         'use_sim_time', default_value='false',
         description=('Set true when using the gazebo simulator.')
     )
-
+    #パッケージ名の変更、実行コマンドの変更は以下を編集してください
     example_node = Node(name=[LaunchConfiguration('execution'), '_node'],
                         package='cit_cranex7_ros2',
                         executable=LaunchConfiguration('execute'),
