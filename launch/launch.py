@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Keitaro Nakamura,Ryotaro Karikomi
+# SPDX-FileCopyrightText: 2023 Keitaro Nakamura
 
 import os
 
