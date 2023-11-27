@@ -68,6 +68,15 @@ int main(int argc, char ** argv)
   //アームの手先を物体へ
   geometry_msgs::msg::Pose target_pose;
   tf2::Quaternion q;
+  
+  target_pose.position.x = 0.25;
+  target_pose.position.y = -0.15;
+  target_pose.position.z = 0.1;
+  q.setRPY(angles::from_degrees(90), angles::from_degrees(0), angles::from_degrees(90));
+  target_pose.orientation = tf2::toMsg(q);
+  move_group_arm.setPoseTarget(target_pose);
+  move_group_arm.move();
+
   target_pose.position.x = 0.3;
   target_pose.position.y = -0.15;
   target_pose.position.z = 0.1;
