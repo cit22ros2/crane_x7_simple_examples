@@ -1,4 +1,4 @@
-# cit_cranex7_ros2
+# crane_x7_simple_example
 crane-x7をROS 2において外部から司令を出し動かすためのパッケージです。
 
 
