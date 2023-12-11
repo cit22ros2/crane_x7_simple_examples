@@ -3,8 +3,6 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
     steps:
     - uses: actions/checkout@v3
     - name: build test
