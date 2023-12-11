@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(cit_cranex7_ros2)
+project(crane_x7_simple_example)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -13,30 +13,72 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(image_geometry REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
+find_package(OpenCV REQUIRED COMPONENTS core)
 find_package(pcl_conversions REQUIRED)
 find_package(pcl_ros REQUIRED)
-find_package(angles REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(moveit_ros_planning_interface REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
-# 分割コンパイルを行う際には以下に追加
 # Build and install node executables
-add_executable(exec_dir
-  src/exec_dir/pick_and_move.cpp
+add_executable(color_detection
+  src/color_detection.cpp
+)
+ament_target_dependencies(color_detection
+    cv_bridge
+    geometry_msgs
+    image_geometry
+    moveit_ros_planning_interface
+    OpenCV
+    pcl_ros
+    pcl_conversions
+    rclcpp
+    tf2_geometry_msgs
 )
 
-ament_target_dependencies(exec_dir
-  ament_cmake
-  pcl_conversions
-  pcl_ros
-  angles
-  rclcpp
-  moveit_ros_planning_interface
+add_executable(pick_and_move
+  src/pick_and_move.cpp
+)
+ament_target_dependencies(pick_and_move
+    cv_bridge
+    geometry_msgs
+    image_geometry
+    moveit_ros_planning_interface
+    OpenCV
+    pcl_ros
+    pcl_conversions
+    rclcpp
+    tf2_geometry_msgs
+)
+add_executable(pick_and_move_tf
+  src/pick_and_move_tf.cpp
+)
+ament_target_dependencies(pick_and_move_tf
+    cv_bridge
+    geometry_msgs
+    image_geometry
+    moveit_ros_planning_interface
+    OpenCV
+    pcl_ros
+    pcl_conversions
+    rclcpp
+    tf2_geometry_msgs
 )
 
 #コードを増やす際は別途installを記述してください
 install(TARGETS
-  exec_dir
+  color_detection
+  DESTINATION lib/${PROJECT_NAME}/
+)
+install(TARGETS
+  pick_and_move 
+  DESTINATION lib/${PROJECT_NAME}/
+)
+install(TARGETS
+  pick_and_move_tf
   DESTINATION lib/${PROJECT_NAME}/
 )
 
