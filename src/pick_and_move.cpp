@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2023 Keitaro Nakamura,Ryotaro karikomi
-
+// SPDX-License-Identifier: Apache 2.0
 #include <cmath>
 
 #include "angles/angles.h"
