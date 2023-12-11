@@ -56,7 +56,7 @@ def generate_launch_description():
     )
 
     picking_node = Node(name="pick_and_place_tf",
-                        package='mypkg',
+                        package='crane_x7_simple_example',
                         executable='pick_and_place_tf',
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},
