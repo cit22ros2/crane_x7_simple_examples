@@ -1,5 +1,5 @@
 // Copyright 2023 Keitaro Nakamura
-# SPDX-License-Identifier: Apach2.0
+// SPDX-License-Identifier: Apache 2.0
 // Reference:
 // https://www.opencv-srf.com/2010/09/object-detection-using-color-seperation.html
 
