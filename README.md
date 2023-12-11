@@ -36,6 +36,8 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 ```
 ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ```
+[!['camera_pickingのデモ'](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/ef1064a2-a127-4bb4-80e8-781fe843d839)](https://youtu.be/7FWFhGC4K1I)
+
 
 # ライセンス
 (C) 2023 Keitaro Nakamura
