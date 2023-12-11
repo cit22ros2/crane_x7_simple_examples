@@ -26,6 +26,8 @@ ros2 launch pick_and_move.launch.py use_sim_time:='true'
 ```
 ros2 launch clane_x7_simple_examples pick_and_move.launch.py 
 ```
+[!['pick_and_move.cppのデモ']('![スクリーンショット 2023-12-11 160102](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/ad018b61-cf41-47fd-98b9-6d7f46474003)
+')]('https://youtu.be/mTcFaEJwO1E')
 
 ### camera_picking
 特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置くコード例です。  
