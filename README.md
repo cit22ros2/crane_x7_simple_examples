@@ -3,18 +3,18 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
 
 
 # このパッケージの使い方
-## install
+## インストール
 ```
 cd ~/ros2_ws/src
 git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
 ```
-## build
+## ビルド
 ```
 cd ~/ros2_ws
 colcon build
 source ~/ros2_ws/install/setup.bash
 ```
-## execute
+## 実行
 ### pick_and_move
 特定の場所にある物体を掴む・持ち上げる・運ぶ・置くコード例です。  
 次のコマンドで実行します。
