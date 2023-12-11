@@ -15,10 +15,10 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ```
 ## execute
-### pick_and_move
+* pick_and_move
 特定の場所にある物体を掴む・持ち上げる・運ぶ・置くコード例です。  
 次のコマンドで実行します。
-### for GAZEBO
+* for GAZEBO
 ```
 ros2 launch pick_and_move.launch.py use_sim_time:='true'
 ```
@@ -31,7 +31,7 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置くコード例です。  
 このコードでは青い物体の位置を検知し物体を掴みます。  
 次のコマンドで実行します。
-### for real machine
+* for real machine
 ```
 ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ```
