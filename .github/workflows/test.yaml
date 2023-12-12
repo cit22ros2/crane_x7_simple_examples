@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         rosdistro:
-          -humble
+          - humble
     steps:
       - name: Build test
         run: |
