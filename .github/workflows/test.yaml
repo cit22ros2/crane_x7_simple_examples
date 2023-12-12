@@ -13,7 +13,7 @@ jobs:
       - name: Build test
         run: |
           mkdir ../ros2_ws/src -p
-          cp -r ./*../ros2_ws/src
+          cp -r ./* ../ros2_ws/src
           cd ../ros2_ws
           rosdep update
           rosdep install -r -y --from-paths --ignore-src ./
