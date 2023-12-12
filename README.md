@@ -8,7 +8,7 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
 cd ~/ros2_ws/src
 git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
 ```
-## ビルド
+## ビルド [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
 ```
 cd ~/ros2_ws
 colcon build
