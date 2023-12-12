@@ -1,0 +1,22 @@
+name: build-test
+on:
+  push:
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    container: osrf/ros:humble-desktop
+    strategy:
+      matrix:
+        rosdistro:
+          -humble
+    steps:
+      - name: Build test
+        run: |
+          mkdir ../ros2_ws/src -p
+          cp -r ./*../ros2_ws/src
+          cd ../ros2_ws
+          rosdep update
+          rosdep install -r -y --from-paths --ignore-src ./
+          source /opt/ros/humble/setup.bash
+          colcon build --symlink-install
+        shell: bash
