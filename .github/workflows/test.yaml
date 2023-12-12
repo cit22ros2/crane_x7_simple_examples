@@ -19,7 +19,11 @@ jobs:
       matrix:
         rosdistro:
           - humble
+
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
       - name: Apt update
         run: |
           sudo apt update -y
