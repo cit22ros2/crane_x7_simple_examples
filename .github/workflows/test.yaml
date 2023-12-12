@@ -10,6 +10,10 @@ jobs:
         rosdistro:
           - humble
     steps:
+      - name: Apt update
+        run: |
+          sudo apt update -y
+
       - name: Build test
         run: |
           mkdir ../ros2_ws/src -p
