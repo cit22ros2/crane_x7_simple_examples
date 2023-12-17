@@ -10,7 +10,7 @@ cd ~/ros2_ws/src
 git clone -b ros2 https://github.com/rt-net/crane_x7_ros.git
 git clone -b ros2 https://github.com/rt-net/crane_x7_description.git
 ```
-## インストール
+## このパッケージインストール
 ```
 cd ~/ros2_ws/src
 git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
