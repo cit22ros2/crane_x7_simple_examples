@@ -3,6 +3,13 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
 
 
 # このパッケージの使い方
+## CRANE-X7のROS 2パッケージのインストール
+```
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone -b ros2 https://github.com/rt-net/crane_x7_ros.git
+git clone -b ros2 https://github.com/rt-net/crane_x7_description.git
+```
 ## インストール
 ```
 cd ~/ros2_ws/src
