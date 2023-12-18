@@ -33,7 +33,7 @@ ros2 launch pick_and_move.launch.py use_sim_time:='true'
 ```
 ros2 launch clane_x7_simple_examples pick_and_move.launch.py 
 ```
-![動画短い版 ‐ Clipchampで作成](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
+![pick_and_moveのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
 
 
 
@@ -45,7 +45,7 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 ```
 ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ```
-[![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)]
+![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
 
 
 
