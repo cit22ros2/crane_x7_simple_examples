@@ -33,7 +33,9 @@ ros2 launch pick_and_move.launch.py use_sim_time:='true'
 ```
 ros2 launch clane_x7_simple_examples pick_and_move.launch.py 
 ```
-[!['pick_and_move.cppのデモ'](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/ad018b61-cf41-47fd-98b9-6d7f46474003)](https://youtu.be/mTcFaEJwO1E)
+![動画短い版 ‐ Clipchampで作成](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
+
+
 
 ### camera_picking
 特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置くコード例です。  
@@ -43,7 +45,8 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 ```
 ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ```
-[!['camera_pickingのデモ'](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/ef1064a2-a127-4bb4-80e8-781fe843d839)](https://youtu.be/7FWFhGC4K1I)
+![無題の動画 ‐ Clipchampで作成 (1)](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
+
 
 
 # ライセンス
