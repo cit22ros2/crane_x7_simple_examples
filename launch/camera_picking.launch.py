@@ -44,27 +44,22 @@ def generate_launch_description():
 
     kinematics_yaml = load_yaml('crane_x7_moveit_config', 'config/kinematics.yaml')
 
-#    declare_example_name = DeclareLaunchArgument(
-#        'example', default_value='color_detection',
-#        description=('Set an example executable name: '
-#                     '[color_detection, aruco_detection, point_cloud_detection]')
-#    )
 
     declare_use_sim_time = DeclareLaunchArgument(
         'use_sim_time', default_value='false',
         description=('Set true when using the gazebo simulator.')
     )
-
-    picking_node = Node(name="pick_and_place_tf",
+    # アームの動きのコードを起動するのはこっち
+    picking_node = Node(# name="pick_and_place_tf",
                         package='crane_x7_simple_example',
                         executable='pick_and_place_tf',
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},
                                     robot_description_semantic,
                                     kinematics_yaml])
-
+    # 画像処理のコードを起動するのはこっち
     detection_node = Node(# name='color_detection'
-                          package='mypkg',
+                          package='carane_x7_simple_example',
                           executable='color_detection',
                           output='screen')
 
