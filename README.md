@@ -57,6 +57,7 @@ $ realsense-viewer
 
 ```
 
+# このパッケージの使い方
 ## このパッケージインストール
 ```
 cd ~/ros2_ws/src
@@ -95,7 +96,7 @@ ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
 
 
-
+# 引継ぎ事項
 ## よく起きるエラーと解決法
 * gazeboでcrane-x7が動かない/動きが途中で止まる  
     実行時にuse_sim_time:=trueをつけてみましょう
