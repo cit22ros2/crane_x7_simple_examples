@@ -114,8 +114,8 @@ ros2 launch crane_x7_simple_examples camera_picking.launch.py
 * rviz/gazeboの画面が真っ黒  
     1度止めてもう一度立ち上げてみましょう
 * colcon buildが通らない  
-    package名やコードの名前は統一されていますか
-    依存関係の問題かもしれません次を試してみましょう
+    1. package名やコードの名前は統一されていますか  
+    2. 依存関係の問題かもしれません次を試してみましょう
     ```
     $ rosdep update
     $ rosdep install -r -y --from-paths --ignore-src ./
