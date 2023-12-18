@@ -68,7 +68,8 @@ $ realsense-viewer
     $ rosdep install -r -y --from-paths --ignore-src ./
     ```
 
-## package.xml解説
+## package.xml解説  
+packege.xml以外はコメントで記述してあります。
 ```
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
