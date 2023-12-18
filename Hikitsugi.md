@@ -1,8 +1,8 @@
 # 引き継ぎ用資料
 2024年度に知能コースに参加する方に向けた知見達です。
 
-# 細かい手引き
-## ROS 2及ぶCRANE-X7セットアップ  
+## 手引き
+### ROS 2及ぶCRANE-X7セットアップ  
   この資料はUbuntu 22.04 LTSを元に書いています。  
   * ROS 2インストール  
 　　上田先生の[動画](https://youtu.be/mBhtD08f5KY)及び[インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts)を参照してください。  
@@ -30,7 +30,7 @@
 [https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
 　また、インストールが完了したらパッケージに含まれるサンプルコードを試すことができます。詳しくは
     [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください。
-## realsenseセットアップ
+### realsenseセットアップ
 [IntelRealsenseのgithub
 ](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md#installing-the-packages)を参照してください。以下先ほどのページから引用
 ```
@@ -68,7 +68,7 @@ $ realsense-viewer
     $ rosdep install -r -y --from-paths --ignore-src ./
     ```
 
-# package.xml解説
+## package.xml解説
 ```
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
@@ -105,7 +105,7 @@ $ realsense-viewer
 </package>
 ```
 
-# やり残したこと
+## やり残したこと
 * gazeboに自分で作成したモデルの導入
 * gazebo上でのrealsenseの動作
 * open-cvのプログラム(color_detection.cpp)の変更
