@@ -7,11 +7,11 @@
 ## realsenseセットアップ
 
 ## よく起きるエラーと解決法
-* gazeboでcrane-x7が動かない/動きが途中で止まる
+* gazeboでcrane-x7が動かない/動きが途中で止まる  
     実行時にuse_sim_time:=trueをつけてみましょう
-* rviz/gazeboの画面が真っ黒
+* rviz/gazeboの画面が真っ黒  
     1度止めてもう一度立ち上げてみましょう
-* colcon buildが通らない
+* colcon buildが通らない  
     package名やコードの名前は統一されていますか
     依存関係の問題かもしれません次を試してみましょう
     ```
