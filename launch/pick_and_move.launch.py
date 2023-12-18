@@ -49,7 +49,7 @@ def generate_launch_description():
         'use_sim_time', default_value='false',
         description=('Set true when using the gazebo simulator.')
     )
-    #パッケージ名の変更、実行コマンドの変更は以下を編集してください
+    #パッケージ名の変更、実行するコードの変更は以下を編集してください
     example_node = Node(
                         package='crane_x7_simple_example',
                         executable='pick_and_move',
