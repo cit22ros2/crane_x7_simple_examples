@@ -45,7 +45,7 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 ```
 ros2 launch clane_x7_simple_examples camera_picking.launch.py
 ```
-![無題の動画 ‐ Clipchampで作成 (1)](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
+[![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)]
 
 
 
