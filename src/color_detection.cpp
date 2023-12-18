@@ -72,7 +72,7 @@ private:
       // 画像処理用の変数を用意
       cv::Mat img_thresholded;
 
-      // 画像の二値化
+      // 画像の二値化(特定の色の部分のみを抽出)
       cv::inRange(
         cv_img->image,
         cv::Scalar(LOW_H, LOW_S, LOW_V),
@@ -86,7 +86,7 @@ private:
         cv::MORPH_OPEN,
         cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5)));
 
-      // 穴埋めの処理
+      // 穴埋めの処理(ひとつの領域をひとまとめに)
       cv::morphologyEx(
         img_thresholded,
         img_thresholded,
@@ -99,7 +99,7 @@ private:
       double d_m10 = moment.m10;
       double d_area = moment.m00;
 
-      // 検出した領域のピクセル数が10000より大きい場合
+      // 検出した領域のピクセル数が10000より大きい場合(小さい領域は物体と見なさず掴まない)
       if (d_area > 5000) {
         // カメラモデル作成
         image_geometry::PinholeCameraModel camera_model;
