@@ -1,4 +1,4 @@
-# crane_x7_simple_example [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
+# crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
 CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッケージです。このパッケージを元にみなさんが製作するために作成しました。
 
 
