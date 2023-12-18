@@ -3,10 +3,10 @@
 
 # 細かい手引き
 ## ROS 2及ぶCRANE-X7セットアップ  
-  この資料はUbuntu 22.04 LTSを元に書いています。
-  * ROS 2インストール
+  この資料はUbuntu 22.04 LTSを元に書いています。  
+  * ROS 2インストール  
 　　上田先生の[動画](https://youtu.be/mBhtD08f5KY)及び[インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts)を参照してください。  
-  * CRANE-X7及び関連パッケージのインストール
+  * CRANE-X7及び関連パッケージのインストール  
 　　[RT社公式リポジトリ](https://github.com/rt-net/crane_x7_ros/tree/ros2)よりインストールできます。
     ```
     # Setup ROS environment
@@ -64,18 +64,46 @@ $ realsense-viewer
     package名やコードの名前は統一されていますか
     依存関係の問題かもしれません次を試してみましょう
     ```
-    rssdep update
+    $ rssdep update
+    $ rosdep install -r -y --from-paths --ignore-src ./
     ```
 
-# コード解説
-## pick_and_move.cpp
+# package.xml解説
+```
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>crane_x7_simple_example</name>  //パッケージ名を変更する際はここも変更
+  <version>0.0.1</version>
+  <description>programs to control CRANE-X7 package</description>　//パッケージの説明
+  <maintainer email="keitaro.nkmr0823@gmail.com">Keitaro Nakamura</maintainer>　//自分の名前を記述
+  <license>Apache License 2.0</license>
 
-## pick_and_move_tf.cpp
+  <author email="keitaro.nkmr0823@gmail.com">Keitaro Nakamura</author>
 
-## color_detection.cpp
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-## *.launch.py
+  <depend>angles</depend>　　　　　//必要な依存関係を記述
+  <depend>crane_x7_control</depend>
+  <depend>crane_x7_description</depend>
+  <depend>crane_x7_moveit_config</depend>
+  <depend>cv_bridge</depend>
+  <depend>geometry_msgs</depend>
+  <depend>image_geometry</depend>
+  <depend>libopencv-dev</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>rclcpp</depend>
+  <depend>realsense2_camera</depend>
+  <depend>tf2_geometry_msgs</depend>
 
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+```
 
 # やり残したこと
 * gazeboに自分で作成したモデルの導入
