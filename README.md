@@ -58,7 +58,7 @@ $ realsense-viewer
 ```
 
 # このパッケージの使い方
-## このパッケージのインストール
+## インストール
 ```
 cd ~/ros2_ws/src
 git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
