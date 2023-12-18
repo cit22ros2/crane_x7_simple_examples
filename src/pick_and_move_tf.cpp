@@ -45,11 +45,11 @@ public:
     // 可動範囲を制限する
     moveit_msgs::msg::Constraints constraints;
     constraints.name = "arm_constraints";
-
+    
     moveit_msgs::msg::JointConstraint joint_constraint;
     joint_constraint.joint_name = "crane_x7_lower_arm_fixed_part_joint";
     joint_constraint.position = 0.0;
-    joint_constraint.tolerance_above = angles::from_degrees(90);
+    joint_constraint.tolerance_above = angles::from_degrees(90);  //ここ以下４つの角度を増やすと可動域が増えます。ただし大きい動きにになることがあるので注意が必要です。
     joint_constraint.tolerance_below = angles::from_degrees(90);
     joint_constraint.weight = 1.0;
     constraints.joint_constraints.push_back(joint_constraint);
@@ -162,8 +162,7 @@ private:
     // ハンドを閉じる
     control_gripper(GRIPPER_CLOSE);
 
-    // 持ち上げる
-    //control_arm(target_position.x(), target_position.y(), target_position.z() + 0.2, 90, 0, 90);
+    // 一度初期姿勢に戻る
     init_pose();
 
     // 移動する
@@ -175,11 +174,7 @@ private:
     // ハンドを開く
     control_gripper(GRIPPER_OPEN);
 
-    // 少しだけハンドを持ち上げる
-   // control_arm(0.3, 0.15, 0.2, 90, 0, 90);
-
     // 初期姿勢に戻る
-    // control_arm(0.15, 0.0, 0.3, -180, 0, 90);
     init_pose();
 
     // ハンドを閉じる
