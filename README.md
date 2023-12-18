@@ -109,9 +109,9 @@ ros2 launch crane_x7_simple_examples camera_picking.launch.py
 
 # 引継ぎ事項
 ## よく起きるエラーと解決法
-* gazeboでCRANE-X7が動かない/動きが途中で止まる  
+* GazeboでCRANE-X7が動かない/動きが途中で止まる  
     実行時にuse_sim_time:=trueをつけてみましょう
-* rviz/gazeboの画面が真っ黒  
+* RViz/Gazeboの画面が真っ黒  
     1度止めてもう一度立ち上げてみましょう
 * colcon buildが通らない  
     1. package名やコードの名前は統一されていますか  
@@ -121,13 +121,13 @@ ros2 launch crane_x7_simple_examples camera_picking.launch.py
     $ rosdep install -r -y --from-paths --ignore-src ./
     ```
 * CRANE-X7のROS 2対応のリポジトリが見つからない  
-    ros対応のブランチを変えるとあります
+    ブランチを変えるとあります
 * 実行コマンドを叩いたのにパッケージが見つからないと出る
     実行コマンドで呼び出す名前とパッケージのものの名前が間違ってる可能性があります。
 
 ## やり残したこと
-* gazeboに自分で作成したモデルの導入
-* gazebo上でのrealsenseの動作
+* Gazeboに自分で作成したモデルの導入
+* Gazebo上でのRealSenseの動作
 * Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更
   * 見つける色の変更
   * 探すのに動きを組み合わせるなど
