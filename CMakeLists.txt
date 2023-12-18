@@ -21,7 +21,7 @@ find_package(OpenCV REQUIRED COMPONENTS core)
 find_package(rclcpp REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
-# Build and install node executables
+# ここから
 add_executable(color_detection
   src/color_detection.cpp
 )
@@ -34,7 +34,7 @@ ament_target_dependencies(color_detection
     rclcpp
     tf2_geometry_msgs
 )
-
+# ここまででコードに必要なものを記述
 add_executable(pick_and_move
   src/pick_and_move.cpp
 )
@@ -60,7 +60,8 @@ ament_target_dependencies(pick_and_move_tf
     tf2_geometry_msgs
 )
 
-#コードを増やす際は別途installを記述してください
+# src下のソースコードはTARGETSで
+# launch下のlaunchファイルはDIRECTORYで
 install(TARGETS
   color_detection
   DESTINATION lib/${PROJECT_NAME}/
