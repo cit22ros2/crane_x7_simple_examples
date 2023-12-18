@@ -50,16 +50,16 @@ def generate_launch_description():
         description=('Set true when using the gazebo simulator.')
     )
     # アームの動きのコードを起動するのはこっち
-    picking_node = Node(# name="pick_and_place_tf",
+    picking_node = Node(# name="pick_and_move_tf",
                         package='crane_x7_simple_example',
-                        executable='pick_and_place_tf',
+                        executable='pick_and_move_tf',
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},
                                     robot_description_semantic,
                                     kinematics_yaml])
     # 画像処理のコードを起動するのはこっち
     detection_node = Node(# name='color_detection'
-                          package='carane_x7_simple_example',
+                          package='crane_x7_simple_example',
                           executable='color_detection',
                           output='screen')
 
