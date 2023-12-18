@@ -63,7 +63,6 @@ public:
 
     move_group_arm_->setPathConstraints(constraints);
 
-    // 把持対象を撮影するためカメラを下に向ける
 
     // 真上から見下ろす撮影姿勢
     // crane_x7_upper_arm_revolute_part_rotate_jointにかかる負荷が高いため長時間の使用に向いておりません
@@ -232,7 +231,7 @@ int main(int argc, char ** argv)
   auto pick_and_place_tf_node = std::make_shared<PickAndPlaceTf>(
     move_group_arm_node,
     move_group_gripper_node);
-  exec.add_node(pick_and_place_tf_node);
+  exec.add_node(pick_and_move_tf_node);
   exec.add_node(move_group_arm_node);
   exec.add_node(move_group_gripper_node);
   exec.spin();
