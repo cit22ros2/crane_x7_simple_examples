@@ -128,7 +128,7 @@ ros2 launch crane_x7_simple_examples camera_picking.launch.py
 ## やり残したこと
 * gazeboに自分で作成したモデルの導入
 * gazebo上でのrealsenseの動作
-* Open CVのプログラム(color_detection.cpp)の変更
+* Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更
   * 見つける色の変更
   * 探すのに動きを組み合わせるなど
 
