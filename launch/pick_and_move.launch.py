@@ -44,14 +44,14 @@ def generate_launch_description():
 
     kinematics_yaml = load_yaml('crane_x7_moveit_config', 'config/kinematics.yaml')
 
-    # Gazebo用
+
     declare_use_sim_time = DeclareLaunchArgument(
         'use_sim_time', default_value='false',
         description=('Set true when using the gazebo simulator.')
     )
     #パッケージ名の変更、実行するコードの変更は以下を編集してください
     example_node = Node(
-                        package='crane_x7_simple_examples',
+                        package='crane_x7_simple_example',
                         executable='pick_and_move',
                         output='screen',
                         parameters=[{'robot_description': description_loader.load()},

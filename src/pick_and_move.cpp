@@ -52,15 +52,15 @@ int main(int argc, char ** argv)
   moveit_msgs::msg::JointConstraint joint_constraint;
   joint_constraint.joint_name = "crane_x7_lower_arm_fixed_part_joint";
   joint_constraint.position = 0.0;
-  joint_constraint.tolerance_above = angles::from_degrees(30);
-  joint_constraint.tolerance_below = angles::from_degrees(30);
+  joint_constraint.tolerance_above = angles::from_degrees(45);
+  joint_constraint.tolerance_below = angles::from_degrees(45);
   joint_constraint.weight = 1.0;
   constraints.joint_constraints.push_back(joint_constraint);
 
   joint_constraint.joint_name = "crane_x7_upper_arm_revolute_part_twist_joint";
   joint_constraint.position = 0.0;
-  joint_constraint.tolerance_above = angles::from_degrees(30);
-  joint_constraint.tolerance_below = angles::from_degrees(30);
+  joint_constraint.tolerance_above = angles::from_degrees(45);
+  joint_constraint.tolerance_below = angles::from_degrees(45);
   joint_constraint.weight = 0.8;
   constraints.joint_constraints.push_back(joint_constraint);
 

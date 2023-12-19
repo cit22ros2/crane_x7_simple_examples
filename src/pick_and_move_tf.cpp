@@ -223,10 +223,10 @@ int main(int argc, char ** argv)
   auto move_group_gripper_node = rclcpp::Node::make_shared("move_group_gripper_node", node_options);
 
   rclcpp::executors::MultiThreadedExecutor exec;
-  auto pick_and_place_tf_node = std::make_shared<PickAndPlaceTf>(
+  auto pick_and_move_tf_node = std::make_shared<PickAndPlaceTf>(
     move_group_arm_node,
     move_group_gripper_node);
-  exec.add_node(pick_and_place_tf_node);
+  exec.add_node(pick_and_move_tf_node);
   exec.add_node(move_group_arm_node);
   exec.add_node(move_group_gripper_node);
   exec.spin();
