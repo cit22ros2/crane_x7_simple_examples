@@ -79,7 +79,7 @@ $ git clone https://github.com/cit22ros2/crane_x7_simple_examples.git
 $ cd ~/ros2_ws
 $ colcon build
 $ source ~/ros2_ws/install/setup.bash
-# ~/.bashrcに登録して置くと楽です 末尾に上1行を追記してください
+# ~/.bashrcに登録しておくと楽です 末尾に上1行を追記してください
 # 登録済みの場合以下でも大丈夫です
 $ source ~/.bashrc
 ```
@@ -97,7 +97,6 @@ ros2 launch crane_x7_simple_examples pick_and_move.launch.py use_sim_time:='true
 ros2 launch crane_x7_simple_examples pick_and_move.launch.py 
 ```
 ![pick_and_moveのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
-
 
 
 ### camera_picking
