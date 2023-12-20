@@ -79,8 +79,8 @@ $ git clone https://github.com/cit22ros2/crane_x7_simple_examples.git
 $ cd ~/ros2_ws
 $ colcon build
 $ source ~/ros2_ws/install/setup.bash
-# ~/.bashrcに登録して置くと楽です。末尾に上1行を追記してください。
-# 登録済みの場合以下でも大丈夫です。
+# ~/.bashrcに登録して置くと楽です 末尾に上1行を追記してください
+# 登録済みの場合以下でも大丈夫です
 $ source ~/.bashrc
 ```
 ## 実行  
