@@ -71,14 +71,17 @@ $ realsense-viewer
 # このパッケージの使い方
 ## インストール
 ```
-cd ~/ros2_ws/src
-git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
+$ cd ~/ros2_ws/src
+$ git clone https://github.com/cit22ros2/crane_x7_simple_examples.git 
 ```
 ## ビルド 
 ```
-cd ~/ros2_ws
-colcon build
-source ~/ros2_ws/install/setup.bash
+$ cd ~/ros2_ws
+$ colcon build
+$ source ~/ros2_ws/install/setup.bash
+# ~/.bashrcに登録して置くと楽です。末尾に上1行を追記してください。
+# 登録済みの場合以下でも大丈夫です。
+$ source ~/.bashrc
 ```
 ## 実行  
 Gazeboあるいは実機で動かす際にはRVizとGazeboをたちあげておく必要があります。詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください
