@@ -28,9 +28,9 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
     $ source ~/ros2_ws/install/setup.bash
     ```
     （インストールコマンド：
-[https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
+   [https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
     (#の行はコメント、$の行はshellのコマンドです)  
- また、インストールが完了したらパッケージに含まれるサンプルコードをGazeboで試すことができます。詳しくは
+    また、インストールが完了したらパッケージに含まれるサンプルコードをGazeboで試すことができます。詳しくは
     [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください。
   * CRANE-X7を動かす際にはUSBポートの設定が必要です。
   ```
