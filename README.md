@@ -1,4 +1,4 @@
-# crane_x7_simple_example [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
+# crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
 CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッケージです。このパッケージを元にみなさんが製作するために作成しました。
 
 
@@ -29,11 +29,22 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
     ```
     （インストールコマンド：
 [https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
-　また、インストールが完了したらパッケージに含まれるサンプルコードを試すことができます。詳しくは
+    (#の行はコメント、$の行はshellのコマンドです)  
+ また、インストールが完了したらパッケージに含まれるサンプルコードをGazeboで試すことができます。詳しくは
     [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください。
+  * CRANE-X7を動かす際にはUSBポートの設定が必要です。
+  ```
+  # 一時的な付与の場合(上手くいかない時はUSBポートの名前を確認してください)
+  $ sudo chmod 666 /dev/ttyUSB0
 
-### realsenseセットアップ
-[IntelRealsenseのgithub
+  # 永続的な付与の場合(再起動を伴います)
+  $ sudo usermod -aG dialout $USER
+  $ reboot
+  ```
+  crane_x7_controlの[README](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_control/README.md)に詳しく書いてあります。
+
+### RealSenseセットアップ
+[IntelRealSenseのgithub
 ](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md#installing-the-packages)を参照してください。以下先ほどのページから引用
 ```
 # Register the server's public key:
@@ -69,17 +80,18 @@ cd ~/ros2_ws
 colcon build
 source ~/ros2_ws/install/setup.bash
 ```
-## 実行
+## 実行  
+Gazeboあるいは実機で動かす際にはRVizとGazeboをたちあげておく必要があります。詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください
 ### pick_and_move
 特定の場所にある物体を掴む・持ち上げる・運ぶ・置くコード例です。  
 次のコマンドで実行します。
-* for GAZEBO
+* for Gazebo
 ```
-ros2 launch pick_and_move.launch.py use_sim_time:='true'
+ros2 launch crane_x7_simple_examples pick_and_move.launch.py use_sim_time:='true'
 ```
 * for real machine
 ```
-ros2 launch clane_x7_simple_examples pick_and_move.launch.py 
+ros2 launch crane_x7_simple_examples pick_and_move.launch.py 
 ```
 ![pick_and_moveのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
 
@@ -91,29 +103,33 @@ ros2 launch clane_x7_simple_examples pick_and_move.launch.py
 次のコマンドで実行します。
 * for real machine
 ```
-ros2 launch clane_x7_simple_examples camera_picking.launch.py
+ros2 launch crane_x7_simple_examples camera_picking.launch.py
 ```
 ![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
 
 
 # 引継ぎ事項
 ## よく起きるエラーと解決法
-* gazeboでcrane-x7が動かない/動きが途中で止まる  
+* GazeboでCRANE-X7が動かない/動きが途中で止まる  
     実行時にuse_sim_time:=trueをつけてみましょう
-* rviz/gazeboの画面が真っ黒  
+* RViz/Gazeboの画面が真っ黒  
     1度止めてもう一度立ち上げてみましょう
 * colcon buildが通らない  
-    package名やコードの名前は統一されていますか
-    依存関係の問題かもしれません次を試してみましょう
+    1. package名やコードの名前は統一されていますか  
+    2. 依存関係の問題かもしれません次を試してみましょう
     ```
     $ rosdep update
     $ rosdep install -r -y --from-paths --ignore-src ./
     ```
+* CRANE-X7のROS 2対応のリポジトリが見つからない  
+    ブランチを変えるとあります
+* 実行コマンドを叩いたのにパッケージが見つからないと出る
+    実行コマンドで呼び出す名前とパッケージのものの名前が間違ってる可能性があります。
 
 ## やり残したこと
-* gazeboに自分で作成したモデルの導入
-* gazebo上でのrealsenseの動作
-* Open CVのプログラム(color_detection.cpp)の変更
+* Gazeboに自分で作成したモデルの導入
+* Gazebo上でのRealSenseの動作
+* Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更
   * 見つける色の変更
   * 探すのに動きを組み合わせるなど
 
