@@ -8,7 +8,7 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
   * ROS 2インストール  
 　　上田先生の[動画](https://youtu.be/mBhtD08f5KY)及び[インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts)を参照してください。  
   * CRANE-X7及び関連パッケージのインストール  
-　　[RT社公式リポジトリ](https://github.com/rt-net/crane_x7_ros/tree/ros2)よりインストールできます。
+　　[RT社公式リポジトリ](https://github.com/rt-net/crane_x7_ros/tree/ros2)よりインストールできます。以下にインストールコマンドを載せます。
     ```
     # Setup ROS environment
     $ source /opt/ros/humble/setup.bash
@@ -27,8 +27,7 @@ CRANE-X7を講義の基準で最低限動かすことのできるROS 2のパッ�
     $ colcon build --symlink-install
     $ source ~/ros2_ws/install/setup.bash
     ```
-    （インストールコマンド：
-   [https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
+    （[https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
     (#の行はコメント、$の行はshellのコマンドです)  
     また、インストールが完了したらパッケージに含まれるサンプルコードをGazeboで試すことができます。詳しくは
     [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください。
