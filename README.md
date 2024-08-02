@@ -1,5 +1,5 @@
 # crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
-このパッケージは、ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）も併用したピッキングの２つだけをまとめたROS 2パッケージです。講義の参加者が、このパッケージを元にして製作を行うために作成されました。
+このパッケージは、ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）も併用したピッキングの２つだけをまとめたシンプルなROS 2パッケージです。講義の参加者が、このパッケージを元にして製作を行うために作成されました。
 
 
 ## このパッケージを使う前に
