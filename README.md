@@ -1,5 +1,5 @@
 # crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
-CRANE-X7とRealsenseD435を用いて最低限動かすことのできるROS 2のパッケージです。このパッケージを元にみなさんが製作するために作成しました。
+このパッケージは、ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）も併用したピッキングの２つだけをまとめたROS 2パッケージです。講義の参加者が、このパッケージを元にして製作を行うために作成されました。
 
 
 ## このパッケージを使う前に
@@ -27,11 +27,11 @@ CRANE-X7とRealsenseD435を用いて最低限動かすことのできるROS 2の
     $ colcon build --symlink-install
     $ source ~/ros2_ws/install/setup.bash
     ```
-    （[https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より引用）  
+    （[https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より転載）  
     (#の行はコメント、$の行はshellのコマンドです)  
-    また、インストールが完了したらパッケージに含まれるサンプルコードをGazeboで試すことができます。詳しくは
+    また、インストールが完了したらパッケージに含まれるサンプルコードをシミュレータ（Gazebo）で試すことができます。詳しくは
     [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください。
-  * CRANE-X7を動かす際にはUSBポートの設定が必要です。
+  * USBポートの設定（実機のCRANE-X7を動かす際に必要となります）
   ```
   # 一時的な付与の場合(上手くいかない時はUSBポートの名前を確認してください)
   $ sudo chmod 666 /dev/ttyUSB0
@@ -44,7 +44,7 @@ CRANE-X7とRealsenseD435を用いて最低限動かすことのできるROS 2の
 
 ### RealSenseセットアップ
 [IntelRealSenseのgithub
-](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md#installing-the-packages)を参照してください。以下先ほどのページから引用
+](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md#installing-the-packages)を参照してください。以下[先ほどのページ](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md#installing-the-packages)から引用
 ```
 # Register the server's public key:
 $ sudo mkdir -p /etc/apt/keyrings
@@ -62,7 +62,7 @@ $ sudo apt-get update
 $ sudo apt-get install librealsense2-dkms
 $ sudo apt-get install librealsense2-utils
 
-# ビューワーの起動
+# セットアップできているか確認（ビューワーの起動）:  
 $ realsense-viewer
 
 ```
@@ -78,15 +78,18 @@ $ git clone https://github.com/cit22ros2/crane_x7_simple_examples.git
 $ cd ~/ros2_ws
 $ colcon build
 $ source ~/ros2_ws/install/setup.bash
-# ~/.bashrcに登録しておくと楽です 末尾に上1行を追記してください
-# 登録済みの場合以下でも大丈夫です
+
+# ３行目のコマンドは、~/.bashrcに書いておくことを推奨します  
+# 下のコマンドで.bashrcに追記できます  
+$ echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bachrc
+# .bashrcに書いてあるとき下のコマンドで実行できます
 $ source ~/.bashrc
 ```
 ## 実行  
-Gazeboあるいは実機で動かす際にはRVizとGazeboをたちあげておく必要があります。詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください
+シミュレータ（Gazebo）あるいは実機で動かす際には、可視化ツール（RViz）とGazeboの両方を起動する必要があります。詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください
 ### pick_and_move
-特定の場所にある物体を掴む・持ち上げる・運ぶ・置くコード例です。  
-次のコマンドで実行します。
+ピッキング（特定の場所にある物体を掴む・持ち上げる・運ぶ・置く）を行うコードです。  
+次のコマンドで実行できます。
 * for Gazebo
 ```
 ros2 launch crane_x7_simple_examples pick_and_move.launch.py use_sim_time:='true'
@@ -99,9 +102,9 @@ ros2 launch crane_x7_simple_examples pick_and_move.launch.py
 
 
 ### camera_picking
-特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置くコード例です。  
-このコードでは青い物体の位置を検知し物体を掴みます。  
-次のコマンドで実行します。
+RGBDセンサを用いたピッキング（特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置く）コードです。  
+このコードでは、青い物体の位置を検知し物体を掴みます。  
+Realsenseを接続し次のコマンドで実行できます。
 * for real machine
 ```
 ros2 launch crane_x7_simple_examples camera_picking.launch.py
@@ -111,10 +114,12 @@ ros2 launch crane_x7_simple_examples camera_picking.launch.py
 
 # 引継ぎ事項
 ## よく起きるエラーと解決法
+* 止め方がわからない  
+    Ctrl + Cで止めることができます
 * GazeboでCRANE-X7が動かない/動きが途中で止まる  
-    実行時にuse_sim_time:=trueをつけてみましょう
+    実行時にuse_sim_time:=trueが抜けていることが多いです
 * RViz/Gazeboの画面が真っ黒  
-    1度止めてもう一度立ち上げてみましょう
+    1度止めてもう一度立ち上げると大体解決します
 * colcon buildが通らない  
     1. package名やコードの名前は統一されていますか  
     2. 依存関係の問題かもしれません次を試してみましょう
