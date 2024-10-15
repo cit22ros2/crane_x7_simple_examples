@@ -116,7 +116,7 @@ Realsenseを接続し次のコマンドで実行できます.
 
   **terminal 1:** `ros2 launch crane_x7_examples demo.launch.py port_name:=/dev/ttyUSB0 use_d435:=true`
 
-  **terminal 2:** `ros2 launch crane_x7_simple_examples pick_and_move.launch.py`
+  **terminal 2:** `ros2 launch crane_x7_simple_examples camera_picking.launch.py`
   
 ![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
 
