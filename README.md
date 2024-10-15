@@ -104,12 +104,6 @@ source ~/.bashrc
 
   **terminal 2:** `ros2 launch crane_x7_simple_examples pick_and_move.launch.py`
 
-* RealSence
-
-  **terminal 1:** `ros2 launch crane_x7_examples demo.launch.py port_name:=/dev/ttyUSB0 use_d435:=true`
-
-  **terminal 2:** `ros2 launch crane_x7_simple_examples pick_and_move.launch.py`
-
 ![pick_and_moveのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/1ae6a7f3-ab86-4d11-852e-52d320dc2758)
 
 
@@ -117,10 +111,13 @@ source ~/.bashrc
 RGBDセンサを用いたピッキング（特定の色の物体を検知する・掴む・持ち上げる・運ぶ・置く）コードです.   
 このコードでは、青い物体の位置を検知し物体を掴みます.   
 Realsenseを接続し次のコマンドで実行できます.  
+
 * for real machine
-```
-ros2 launch crane_x7_simple_examples camera_picking.launch.py
-```
+
+  **terminal 1:** `ros2 launch crane_x7_examples demo.launch.py port_name:=/dev/ttyUSB0 use_d435:=true`
+
+  **terminal 2:** `ros2 launch crane_x7_simple_examples pick_and_move.launch.py`
+  
 ![camera_pickingのデモ動画](https://github.com/cit22ros2/crane_x7_simple_examples/assets/79034190/6f7d34e0-7bf0-4dd0-a9cf-9fd8b9e58e62)
 
 
