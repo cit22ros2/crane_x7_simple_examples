@@ -73,6 +73,8 @@ realsense-viewer
 cd ~/ros2_ws/src
 git clone https://github.com/CIT-Autonomous-Robot-Lab/crane_x7_simple_examples.git 
 ```
+※ただし，このパッケージはこのコードを雛形にして講義のパッケージを作成してほしいという意図の元作成されたので，
+このリポジトリをforkしてそちらをcloneすることを推奨します．
 ## ビルド 
 ```
 cd ~/ros2_ws
