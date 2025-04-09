@@ -1,5 +1,5 @@
 # crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
-このパッケージは, ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）も併用したピッキングの２つだけをまとめたシンプルなROS 2パッケージです. 講義の参加者が, このパッケージを元にして製作を行うために作成されました.   
+このパッケージは, ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）を併用したピッキングの２つだけをまとめたシンプルなROS 2パッケージです. 講義の参加者が, このパッケージを元にして製作を行うために作成されました.   
 
 
 ## このパッケージを使う前に
@@ -147,16 +147,35 @@ Realsenseを接続し次のコマンドで実行できます.
 
 ## やり残したこと
 * Gazeboに自分で作成したモデルの導入
-* Gazebo上でのRealSenseの動作
-* Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更
-  * 見つける色の変更
-  * 探すのに動きを組み合わせるなど
+* ~~Gazebo上でのRealSenseの動作~~ ずっと前にkuwamaiさんがやっておられました．[こちら](https://github.com/Kuwamai/crane_x7_d435)
+* ~~Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更~~
+  * ~~見つける色の変更~~
+  * ~~探すのに動きを組み合わせるなど~~
 * 姿勢を維持したまま移動すること
 
+
+# Thankyou for using
+* 2024
+  * [骨格解析を用いたマニピュレータ操作](https://github.com/akajaika/crane_x7_Hand_Tracking)
+  * [全自動じゃんけん機](https://github.com/uchiyamashouki/sazaesann)
+  * [ハンコを押すマニピュレータ](https://github.com/ken222d/crane_x7_stamp)
+  * [回転寿司自動配膳アーム](https://github.com/bloodlemon2/crane_x7_serving_food_examples?tab=readme-ov-file)
 
 # ライセンス
 (C) 2023 Keitaro Nakamura, Ryotaro Karikomi
 
-このパッケージはRT Corporationの公開する[パッケージ](https://github.com/rt-net/crane_x7_ros/tree/ros2)の[crane_x7_examples](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)のlaunch/camera_picking.launch.py,pick_and_mvoe.launch.py,src/pick_and_move_tf.py,color_detection,CMakeList.txt,package.xmlは微小な, src/pick_and_move.cppは大幅な改変によって作成されました.  
+このパッケージはRT Corporationの公開する[パッケージ](https://github.com/rt-net/crane_x7_ros/tree/ros2)に含まれる[crane_x7_examples](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を改変したものです．
+具体的には，
+* launch/camera_picking.launch.py
+* pick_and_mvoe.launch.py
+* pick_and_move_tf.py
+* color_detection
+* CMakeList.txt
+* package.xml
+
+に微小な改変を
+* pick_and_move.cpp
+
+に大幅な改変を加え作成されました.  
 このパッケージはApache License, Version 2.0に基づき公開されています.  
 ライセンスの全文は[LICENSE](./LICENSE)から確認できます.  
