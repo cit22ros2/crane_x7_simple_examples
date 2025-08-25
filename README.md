@@ -150,7 +150,8 @@ Realsenseを接続し次のコマンドで実行できます.
 
 ## やり残したこと
 * Gazeboに自分で作成したモデルの導入
-* ~~Gazebo上でのRealSenseの動作~~ ずっと前にkuwamaiさんがやっておられました．[こちら](https://github.com/Kuwamai/crane_x7_d435)
+* ~~Gazebo上でのRealSenseの動作~~ずっと前にkuwamaiさんがやっておられました．[こちら](https://github.com/Kuwamai/crane_x7_d435)
+	* ROS 2への移植
 * ~~Open CVのプログラム([color_detection.cpp](https://github.com/cit22ros2/crane_x7_simple_examples/blob/main/src/color_detection.cpp))の変更~~
   * ~~見つける色の変更~~
   * ~~探すのに動きを組み合わせるなど~~
