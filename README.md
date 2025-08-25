@@ -1,10 +1,10 @@
 # crane_x7_simple_examples [![build-test](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml/badge.svg)](https://github.com/cit22ros2/crane_x7_simple_examples/actions/workflows/test.yaml)
-このパッケージは, ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）を併用したピッキングの２つだけをまとめたシンプルなROS 2パッケージです. 講義の参加者が, このパッケージを元にして製作を行うために作成されました.   
+このパッケージは, ロボットアーム（CRANE-X7）単独でのピッキングとRGBDセンサ（RealsenseD435）を併用したピッキングの２つだけをまとめたシンプルなROS 2パッケージです. 講義の参加者が, このパッケージをひな形にして製作を行うために作成されました.   
 
 
 ## このパッケージを使う前に
 ### ROS 2及びCRANE-X7セットアップ  
-  この資料はUbuntu 22.04 LTSを元に書いています.   
+  この資料はUbuntu 22.04 LTSの環境で書いています.   
   * ROS 2インストール  
 　　上田先生の[動画](https://youtu.be/mBhtD08f5KY)及び[インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts)を参照し, インストールを行ってください.   
   * CRANE-X7及び関連パッケージのインストール  
@@ -88,7 +88,10 @@ echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bachrc
 source ~/.bashrc
 ```
 ## 実行  
-シミュレータ（Gazebo）あるいは実機で動かす際には、可視化ツール（RViz）とGazeboの両方を起動する必要があります. 詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)を確認してください.   
+シミュレータ（Gazebo）あるいは実機で動かす際には、
+実機orシミュレータの立ち上げのコマンドと動作を実施するコマンドの2つを起動する必要があります. 
+詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples#3-move_group%E3%81%A8controller%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)
+を確認してください.   
 
 ### pick_and_move
 ピッキング（特定の場所にある物体を掴む・持ち上げる・運ぶ・置く）を行うコードです.   
