@@ -4,7 +4,8 @@
 
 ## このパッケージを使う前に
 ### ROS 2及びCRANE-X7セットアップ  
-  この資料はUbuntu 22.04 LTSの環境で書いています.   
+  **※この資料はUbuntu 22.04 LTS, ROS 2 humbleの環境で書いています.**
+  
   * ROS 2インストール  
 　　上田先生の[動画](https://youtu.be/mBhtD08f5KY)及び[インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts)を参照し, インストールを行ってください.   
   * CRANE-X7及び関連パッケージのインストール  
@@ -16,8 +17,8 @@
     # Download crane_x7 repositories
     mkdir -p ~/ros2_ws/src
     cd ~/ros2_ws/src
-    git clone -b ros2 https://github.com/rt-net/crane_x7_ros.git
-    git clone -b ros2 https://github.com/rt-net/crane_x7_description.git
+    git clone -b humble https://github.com/rt-net/crane_x7_ros.git
+    git clone -b humble https://github.com/rt-net/crane_x7_description.git
 
     # Install dependencies
     rosdep install -r -y -i --from-paths .
@@ -29,8 +30,8 @@
     ```
     （[https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md](https://github.com/rt-net/crane_x7_ros/tree/ros2/README.md)より転載）  
     (#の行はコメント, ~~$の行はshellのコマンドです~~)  
-    また, インストールが完了したらパッケージに含まれるサンプルコードをシミュレータ（Gazebo）で試すことができます. 詳しくは
-    [こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください. 
+    また, インストールが完了したらパッケージに含まれるサンプルコードをシミュレータ（Gazebo）で試すことができます.  
+    詳しくは[こちら](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を参照してください. 
   * USBポートの設定（実機のCRANE-X7を動かす際に必要となります）
 	  ```
 	  # 一時的な付与の場合(上手くいかない時はUSBポートの名前を確認してください)
@@ -40,7 +41,7 @@
     sudo usermod -aG dialout $USER
 	  reboot
 	  ```
->   crane_x7_controlの[README](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_control/README.md)に詳しく書いてあります. 
+  >   crane_x7_controlの[README](https://github.com/rt-net/crane_x7_ros/blob/ros2/crane_x7_control/README.md)に詳しく書いてあります. 
 
 ### RealSenseセットアップ
 [IntelRealSenseのgithub
