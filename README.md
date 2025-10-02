@@ -172,14 +172,14 @@ Realsenseを接続し次のコマンドで実行できます.
 このパッケージはRT Corporationの公開する[パッケージ](https://github.com/rt-net/crane_x7_ros/tree/ros2)に含まれる[crane_x7_examples](https://github.com/rt-net/crane_x7_ros/tree/ros2/crane_x7_examples)を改変したものです．
 具体的には，
 * launch/camera_picking.launch.py
-* pick_and_mvoe.launch.py
-* pick_and_move_tf.py
-* color_detection
+* launch/pick_and_mvoe.launch.py
+* src/pick_and_move_tf.py
+* src/color_detection.py
 * CMakeList.txt
 * package.xml
 
 に微小な改変を
-* pick_and_move.cpp
+* src/pick_and_move.cpp
 
 に大幅な改変を加え作成されました.  
 このパッケージはApache License, Version 2.0に基づき公開されています.  
